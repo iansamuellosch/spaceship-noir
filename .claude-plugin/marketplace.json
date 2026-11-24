@@ -1,5 +1,5 @@
 {
   "name": "spaceship-noir",
   "owner": { "name": "iansamuellosch" },
-  "plugins": [{ "name": "space-cowboy", "source": "./" }]
+  "plugins": [{ "name": "spaceship-noir", "source": "./" }]
 }

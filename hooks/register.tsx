@@ -6,7 +6,7 @@ import { scene } from './scene.js'
 
 // Noir poster: ink-black grays, aged-paper cream type, one red, a little sage.
 const { theme, problems } = makeColors({
-  label: 'Space Cowboy',
+  label: 'Spaceship Noir',
   only: 'dark',
   roles: { accent: '#d23a2a', danger: '#e0603a', success: '#8aa592', warning: '#d6b25e', pro: '#a993c4' },
   dark: {
@@ -27,7 +27,7 @@ const { theme, problems } = makeColors({
 const BASE: ThemeSetArgs = {
   colors: theme,
   overrideColorScheme: 'dark',
-  backdrop: { scene: 'space-cowboy', glass: { blur: 16, tint: '#0a0a0c', opacity: 0.6 } },
+  backdrop: { scene: 'spaceship-noir', glass: { blur: 16, tint: '#0a0a0c', opacity: 0.6 } },
 }
 
 const LOOK: ThemeSetArgs = {
@@ -83,7 +83,7 @@ export const register: Register = on => {
 
   on('ui.render', { component: 'Backdrop' }, ($, e, next) => {
     if (e.surface !== 'desktop' && e.surface !== 'mobile') return next(e)
-    if (e.props.scene !== 'space-cowboy') return next(e)
+    if (e.props.scene !== 'spaceship-noir') return next(e)
 
     const { Svg } = $.ui.resolve(e)
     const fuel = 100 - fill

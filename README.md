@@ -14,7 +14,7 @@ The theme draws in the Claude desktop app (Code tab) and the mobile app. Claude 
 At the prompt of a Claude Code terminal session:
 
 ```
-/plugin install space-cowboy --marketplace iansamuellosch/spaceship-noir
+/plugin install spaceship-noir --marketplace iansamuellosch/spaceship-noir
 ```
 
 Answer `y` to add the marketplace, then press Enter to install it for your user.
@@ -22,7 +22,7 @@ Answer `y` to add the marketplace, then press Enter to install it for your user.
 From a shell:
 
 ```
-claude plugin install space-cowboy --marketplace iansamuellosch/spaceship-noir
+claude plugin install spaceship-noir --marketplace iansamuellosch/spaceship-noir
 ```
 
 In the desktop app, where `/plugin` doesn't run:
