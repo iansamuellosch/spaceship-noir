@@ -52,9 +52,9 @@ const GLINTS = glints()
 // One flat silhouette, poster style.
 const SHIP = `
 <g>
-  <ellipse class="burn" cx="0" cy="9" rx="5" ry="14" fill="${CREAM}"/>
-  <path d="M0 -210 L8 -170 L10 -150 L28 -128 L28 -120 L11 -126 L13 -90 L68 -20 L70 -6 L40 -10 L14 -24 L12 0 L-12 0 L-14 -24 L-40 -10 L-70 -6 L-68 -20 L-13 -90 L-11 -126 L-28 -120 L-28 -128 L-10 -150 L-8 -170 Z" fill="${RED}"/>
-  <path d="M0 -174 L4 -160 L4 -138 L0 -132 L-4 -138 L-4 -160 Z" fill="#0a0a0c"/>
+  <ellipse class="burn" cx="0" cy="8" rx="3.5" ry="12" fill="${CREAM}"/>
+  <path d="M0 -210 L5 -172 L7 -150 L18 -132 L18 -125 L7 -128 L9 -92 L46 -18 L47 -6 L26 -10 L9 -22 L8 0 L-8 0 L-9 -22 L-26 -10 L-47 -6 L-46 -18 L-9 -92 L-7 -128 L-18 -125 L-18 -132 L-7 -150 L-5 -172 Z" fill="${RED}"/>
+  <path d="M0 -176 L3 -162 L3 -140 L0 -134 L-3 -140 L-3 -162 Z" fill="#0a0a0c"/>
 </g>`
 
 const STYLE = `
@@ -97,7 +97,7 @@ function flight(p) {
   const t = p / 100
   const sx = 1500
   const sy = 830 - t * 620
-  const sc = 1 - t * 0.55
+  const sc = 0.75 - t * 0.4
   // Contrail in the ship's own units, so it sways with the ship and stays centered.
   const len = (1000 - sy) / sc + 20
   const w0 = 1.2 / sc
@@ -105,7 +105,7 @@ function flight(p) {
   return `
 <svg width="100%" height="100%" viewBox="0 0 1600 1000" preserveAspectRatio="xMaxYMid meet">
   <g mask="url(#risemask)" fill="none" stroke-width="8" stroke-linejoin="miter">
-    <path d="M1412 1010 L1412 440 C1412 360 1380 310 1320 250 L1190 -20" stroke="${RED}" opacity="0.9"/>
+    <path d="M1412 1010 L1412 440 C1412 360 1395 300 1340 230 L1144 -20" stroke="${RED}" opacity="0.9"/>
     <line x1="1425" y1="1000" x2="1425" y2="0" stroke="${CREAM}" opacity="0.8"/>
     <line x1="1438" y1="1000" x2="1438" y2="0" stroke="${SAGE}" opacity="0.8"/>
     <line x1="1584" y1="0" x2="1584" y2="1000" stroke="${CREAM}" stroke-width="1.5" stroke-dasharray="60 140" opacity="0.3" class="rush"/>
